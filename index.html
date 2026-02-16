@@ -10,15 +10,18 @@
 
 <script>
 
-     /* Create an array */
+     let words = ["I", "like", "to", "code"];
+     
+     document.getElementById("generateBtn").addEventListener("click", generateSentence);
 
-     /* Create function that concatenates array into 
-     a sentence (adding spaces between words), and 
-     outputs the result to '<p id="output"></p>' innerHTML */
+     function generateSentence() {
+          let sentence = "";
+          for (let i = 0; i < words.length; i++) {
+               sentence += words[i] + " ";
+          }
 
-     /* Add an event listener to generateBtn.
-     When clicked, the generateBtn should execute 
-     the generateSentence function., displaing the sentence */
+          document.getElementById("output").innerHTML = sentence;
+     }
 
 </script>
 
